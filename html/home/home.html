@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wiyaApp">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Project Wiya</title>
+  </head>
+
+  <body ng-controller="HomeCtrl">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">WIYA</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="" data-toggle="modal" data-target="#loginModal">Login</a></li>
+              <li><a href="">Register</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>Welcome to WIYA</h2>
+        <p>Look, it gets old. Party coming up? Better ask all your friends for their addresses.
+          Oh boy, and make sure you write the down! You know, just in case you ever plan on sending a letter, package, driving to their home, etc.
+          <br />
+          I mean, I love a good spreadsheet, and it was pretty fun asking 50 of my closest friends for their address while planing my wedding (I'm not sure if my sarcasm is coming across well here).</p>
+          <h3>Luckily, there is a better way</h3>
+          <br />
+          <p>Click the button below to learn more about Wiya and how we're going finally make it easy to keep track of friends and family addresses.
+          </p>
+        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+      </div>
+    </div>
+    <div class="modal" id="loginModal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">Login</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-signin" role="form" action="php/process_login.php" method="post" name="login_form">
+                    <input name="email" type="email" class="form-control" placeholder="Email address" required="" autofocus="">
+                    <input id="password" name="password" type="password" class="form-control" placeholder="Password" required="">
+
+                     <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                         <button type="button"
+                                value="Login"
+                                class="btn btn-primary"
+                                onclick="formhash(this.form, this.form.password);" />Login</button>
+                     </div>
+                   </form>
+              </div>
+
+          </div>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
