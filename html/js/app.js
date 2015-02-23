@@ -15,6 +15,5 @@ config(['$routeProvider', function($routeProvider) {
 //TODO:Move inside app controllers?
 $(document).ready(function() {
                $.material.init();
-               $.material.ripples();
-               $.material.input()
+               console.log('Material Initialiazed');
            });
