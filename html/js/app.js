@@ -10,10 +10,11 @@ config(['$routeProvider', function($routeProvider) {
     $routeProvider.otherwise({
         redirectTo: '/home'
     });
-}]);
+}])
 
-//TODO:Move inside app controllers?
-$(document).ready(function() {
-               $.material.init();
-               console.log('Material Initialiazed');
-           });
+.controller('appCtrl', ['$scope', function($scope) {
+  $(document).ready(function() {
+                 $.material.init();
+                 console.log('Material Initialiazed');
+             });
+}]);

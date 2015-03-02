@@ -13,7 +13,10 @@ angular.module('wiyaApp.home', ['ngRoute'])
 // Home controller
 .controller('HomeCtrl', ['$scope', function($scope) {
   $(document).ready(function() {
-                 $.material.init();
-                 console.log('Material Initialiazed');
-             });
+   $.material.init();
+   console.log('Material Initialiazed');
+ });
+
+
+
 }]);
